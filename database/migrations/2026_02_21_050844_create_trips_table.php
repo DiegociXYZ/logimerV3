@@ -40,6 +40,13 @@ return new class extends Migration
             $table->enum('status',['agendado','in_progress','delayed','completed','cancelled'])
                 ->default('agendado');
 
+            $table->decimal('diesel_cost', 10, 2)->nullable();
+            $table->decimal('diesel_liters', 10, 2)->nullable();
+
+
+            $table->decimal('kilometraje_start', 10, 2)->nullable();
+            $table->decimal('kilometraje_end', 10, 2)->nullable();
+
             $table->LongText('notes')->nullable();
 
             $table->timestamps();
