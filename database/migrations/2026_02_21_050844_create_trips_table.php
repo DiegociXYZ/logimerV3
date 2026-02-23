@@ -18,11 +18,6 @@ return new class extends Migration
                 ->constrained()
                 ->onDelete('cascade');
 
-            $table->foreignId('vehicle_id')
-                ->constrained()
-                ->nullable()
-                ->onDelete('set null');
-
             $table->foreignId('driver_id')
                 ->constrained()
                 ->onDelete('set null')

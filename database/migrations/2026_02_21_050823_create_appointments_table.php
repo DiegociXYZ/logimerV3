@@ -14,6 +14,7 @@ return new class extends Migration
         //Parametros iniciales de la base de datos, con la informacion del contenedor y a cual quiente pertenece
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
+
             $table->string('reference_number')->nullable();
 
             $table->foreignId('client_id')

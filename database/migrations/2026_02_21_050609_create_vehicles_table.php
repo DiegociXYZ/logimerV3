@@ -15,7 +15,24 @@ return new class extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('placa')->unique();
+
+            $table->string('placa')
+                ->unique();
+
+            $table->enum('tipo', ['camion','remolque','dolly'])
+                ->default('remolque');
+
+            $table->string('modelo')
+                ->nullable();
+
+            $table->enum('status',['disponible','no_disponible','mantenimiento']) //should i add in_use?????
+                ->default('disponible');
+
+            $table->boolean('is_rented')
+                ->default(false);
+
+            $table->text('notes');
+
             $table->timestamps();
         });
     }

@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // DESCOMENTAR CUANDO HACER DEPLOYMENT O NO CORRE y tener una cuenta real en la database
+   // public function canAccessPanel(Panel $panel): bool
+   // {
+   //     return str_ends_with($this->email, '@merluza.org') && $this->hasVerifiedEmail();
+   // }
 }
