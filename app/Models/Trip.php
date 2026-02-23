@@ -24,6 +24,11 @@ class Trip extends Model
         'kilometraje_end',
         'notes',
     ];
+    protected $cast = [
+        'loading_eta' => 'datetime',
+        'delivery_eta' => 'datetime',
+        'diesel_cost' => 'decimal:2',
+    ];
 
     public function appointment() :BelongsTo {
         return $this->belongsTo(Appointment::class);
