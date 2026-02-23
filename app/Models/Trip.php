@@ -32,7 +32,7 @@ class Trip extends Model
     public function driver() :BelongsTo {
         return $this->belongsTo(Driver::class);
     }
-    public function truck() :BelongsTo {
-        return $this->belongsTo(Truck::class);
+    public function vehicles() :BelongsToMany {
+        return $this->belongsToMany(Vehicle::class, 'trip_vehicles');
     }
 }

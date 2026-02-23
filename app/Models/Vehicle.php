@@ -17,6 +17,6 @@ class Vehicle extends Model
     ];
 
     public function trips(): BelongsToMany {
-        return $this->belongsToMany(Appointment::class,'trip_vehicles','vehicle_id','appointment_id');
+        return $this->belongsToMany(Trip::class,'trip_vehicles');
     }
 }

@@ -20,9 +20,13 @@ class Appointment extends Model
         'gps',
         'notes',
     ];
+    protected $cast = [
+        'loading_eta' => 'datetime',
+        'delivery_eta' =>'datatime',
+    ];
 
     public function client():BelongsTo {
-        return $this->belongsTo(Client::class,'client_id');
+        return $this->belongsTo(Client::class);
     }
 
     public function trips() :HasMany {
