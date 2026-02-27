@@ -21,8 +21,8 @@ return new class extends Migration
                 ->constrained()
                 ->onDelete('cascade');
 
-            $table->string('pickup_location');
-            $table->string('delivery_location');
+            $table->string('pickup_location')->nullable();
+            $table->string('delivery_location')->nullable();
 
             $table->dateTime('loading_eta')->nullable();
             $table->dateTime('delivery_eta')->nullable();
