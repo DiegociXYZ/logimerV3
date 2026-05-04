@@ -20,6 +20,7 @@ class DriversTable
                 TextColumn::make('telefono')
                     ->searchable(),
                 IconColumn::make('is_burrito')
+                    ->label('Es burrito?')
                     ->boolean(),
                 TextColumn::make('created_at')
                     ->dateTime()

@@ -15,11 +15,15 @@ class TripsTable
     {
         return $table
             ->columns([
-                TextColumn::make('appointment.id')
+                TextColumn::make('appointment.reference_number')
+                    ->label('Cita')
                     ->searchable(),
-                TextColumn::make('driver.id')
+                TextColumn::make('driver.nombre')
+                    ->label('Conductor')
+                    ->sortable()
                     ->searchable(),
                 IconColumn::make('is_burrito')
+                    ->label('Es burrito?')
                     ->boolean(),
                 TextColumn::make('pickup_location')
                     ->searchable(),

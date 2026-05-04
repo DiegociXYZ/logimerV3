@@ -4,6 +4,8 @@ namespace App\Filament\Resources\Clients\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
+use Filament\Schemas\Components\Section;
+
 
 class ClientForm
 {
@@ -11,7 +13,7 @@ class ClientForm
     {
         return $schema
             ->components([
-                Section::make('Informacion del CLiente')
+                Section::make('Informacion del Cliente')
                     ->description('Detalles principales del cliente.')
                     ->schema([
                         TextInput::make('nombre')

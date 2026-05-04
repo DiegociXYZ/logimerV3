@@ -20,6 +20,7 @@ class VehicleResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTruck;
 
+    protected static ?int $navigationSort = 4;
     protected static ?string $recordTitleAttribute = 'vehicle';
 
     public static function form(Schema $schema): Schema

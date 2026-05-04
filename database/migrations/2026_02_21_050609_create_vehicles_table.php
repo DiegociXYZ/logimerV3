@@ -32,6 +32,7 @@ return new class extends Migration
                 ->default(false);
 
             $table->text('notes');
+                ->nullable();
 
             $table->timestamps();
         });

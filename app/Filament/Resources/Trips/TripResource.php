@@ -18,10 +18,11 @@ class TripResource extends Resource
 {
     protected static ?string $model = Trip::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-
+    //protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-chevron-double-right';
     protected static ?string $recordTitleAttribute = 'trip';
 
+    protected static ?int $navigationSort = 2;
     public static function form(Schema $schema): Schema
     {
         return TripForm::configure($schema);

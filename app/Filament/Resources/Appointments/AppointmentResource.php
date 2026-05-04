@@ -18,6 +18,7 @@ class AppointmentResource extends Resource
 {
     protected static ?string $model = Appointment::class;
 
+    protected static ?int $navigationSort = 1;
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDays;
 
     protected static ?string $recordTitleAttribute = 'appointment';
